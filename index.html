@@ -4,31 +4,46 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <style src="./assets/style.css"></style>
-        <title>Weather App</title>
+        <link rel="stylesheet" href="./assets/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+        <title>Weather Now</title>
     </head>
     <body>
-        <header
-            class="container-fluid text-center text-white bg-dark p-2 weather-header"
-        >
-            <h1>Weather App</h1>
-        </header>
+        <nav class="navbar bg-body-tertiary">
+            <div class="nav-container">
+              <a class="navbar-brand" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-thermometer-sun" viewBox="0 0 16 16">
+                    <path d="M5 12.5a1.5 1.5 0 1 1-2-1.415V2.5a.5.5 0 0 1 1 0v8.585A1.5 1.5 0 0 1 5 12.5z"/>
+                    <path d="M1 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0V2.5zM3.5 1A1.5 1.5 0 0 0 2 2.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0L5 10.486V2.5A1.5 1.5 0 0 0 3.5 1zm5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5zm4.243 1.757a.5.5 0 0 1 0 .707l-.707.708a.5.5 0 1 1-.708-.708l.708-.707a.5.5 0 0 1 .707 0zM8 5.5a.5.5 0 0 1 .5-.5 3 3 0 1 1 0 6 .5.5 0 0 1 0-1 2 2 0 0 0 0-4 .5.5 0 0 1-.5-.5zM12.5 8a.5.5 0 0 1 .5-.5h1a.5.5 0 1 1 0 1h-1a.5.5 0 0 1-.5-.5zm-1.172 2.828a.5.5 0 0 1 .708 0l.707.708a.5.5 0 0 1-.707.707l-.708-.707a.5.5 0 0 1 0-.708zM8.5 12a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5z"/>
+                  </svg>
+                  <h1>Weather Now</h1>
+              </a>
+            </div>
+          </nav>
         <div>
             <div>
-                <section id="left">
-                    <h2>What City Would You Like to Look Up?</h2>
-                    <form>
+                <section>
+                    <h2 class="title">What City Would You Like to Look Up?</h2>
+                    <form id="search-form">
                         <div>
                             <input
                                 type="text"
                                 id="search-input"
                                 placeholder="Flagstaff"
                             />
-                            <button type="submit">Search</button>
+                            <button type="submit" id="search-button">
+                                Search
+                            </button>
                         </div>
                     </form>
-                    <div id="search-history"></div>
                 </section>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-header" >
+                      Previous Searches
+                      <ul class="list-group list-group-flush" id="seach-history"></ul>
+                    </div>
+                  </div>
                 <div id="right">
                     <section id="today"></section>
                     <section id="future"></section>
@@ -40,5 +55,11 @@
         search
     </button> -->
         <script src="./assets/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+        <script>
+            dayjs().format();
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
     </body>
 </html>

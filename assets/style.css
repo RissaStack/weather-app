@@ -1,0 +1,81 @@
+* {
+    font-family: 'Merriweather', serif;
+}
+
+body {
+    margin: 0;
+    background-color: #BED9E8;
+}
+
+nav {
+    background-color: #3E517A;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+} */
+
+h1 {
+    color: #000000;
+    text-align: left;
+    margin-top: 40px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #3E517A;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.bi-thermometer-sun {
+
+    color: #EFCB68;
+    height: 40px;
+    width: 40px;
+}
+
+.title {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+#search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+#search-button:hover {
+    color: #EFCB68;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-left: 40px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: center;
+}
+
+#today {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
