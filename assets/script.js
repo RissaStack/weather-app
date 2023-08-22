@@ -48,6 +48,7 @@ function getForecast(lat, lon) {
         });
 }
 
+
 //render current day
 function renderCurrentDay(data) {
     let today = document.querySelector('#today');
